@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans&family=Lato&family=Libre+Baskerville&family=Merriweather:wght@700&family=Ms+Madi&family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;800&family=Roboto&family=Roboto+Slab&display=swap');
+
+.signup-form{
+    border: 1px solid gray;
+    width: 45%;
+    margin: 10px auto;
+    font-family: 'Poppins', sans-serif;
+}
+.signup-form h2{
+    text-align: center;
+}
+.form-control{
+    text-align: center;
+}
+.form-control label{
+    margin-right: 218px;
+    font-size: 16px;
+}
+.input-field{
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 15px;
+    outline: none;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+#confirm-pass{
+    margin-left: 70px;
+}
+.reset{
+    text-decoration: none;
+    margin-left: 180px;
+}
+.login-link{
+    margin-right: 100px;
+    margin-top: 20px;
+}
+.login-btn{
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    padding: 15px 131px;
+    background-color: aquamarine;
+    font-size: 17px;
+    cursor: pointer;
+}
+.dash-bar{
+    margin: 1px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.first-dash{
+    border-bottom: 1px solid gray;
+    width: 150px;
+    margin-right: 20px;
+}
+.second-dash{
+    border-bottom: 1px solid gray;
+    width: 150px;
+    margin-left: 20px;
+}
+.social-btn{
+    background-color: aquamarine;
+    padding: 0 75px;
+    border: none;
+    border-radius: 30px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.social-btn span{
+    font-size: 17px;
+}
+.social-btn img{
+    width: 45px;
+}

@@ -7,6 +7,7 @@ import Login from "./Pages/Login/Login";
 import ManageItem from "./Pages/ManageItem/ManageItem";
 import MyItems from "./Pages/MyItems/MyItems";
 import Header from "./Pages/Shared/Header/Header";
+import SignUp from "./Pages/SignUp/SignUp";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/manageitem" element={<ManageItem></ManageItem>}></Route>
         <Route path="/additem" element={<AddItem></AddItem>}></Route>
         <Route path="/myitems" element={<MyItems></MyItems>}></Route>
+        <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
       </Routes>
     </div>
