@@ -3,6 +3,7 @@
 .signup-form{
     border: 1px solid gray;
     width: 45%;
+    height: 600px;
     margin: 10px auto;
     font-family: 'Poppins', sans-serif;
 }
@@ -76,4 +77,14 @@
 }
 .social-btn img{
     width: 45px;
+}
+
+@media screen and (max-width: 576px) {
+    .signup-form{
+        width: 100%;
+    }
+    #confirm-pass{
+        margin-left: 26px;
+    }
+    
 }

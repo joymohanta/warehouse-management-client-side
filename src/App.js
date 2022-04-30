@@ -3,6 +3,7 @@ import "./App.css";
 import AddItem from "./Pages/AddItem/AddItem";
 import Blogs from "./Pages/Blogs/Blogs";
 import Home from "./Pages/Home/Home";
+import Inventory from "./Pages/Inventory/Inventory";
 import Login from "./Pages/Login/Login";
 import ManageItem from "./Pages/ManageItem/ManageItem";
 import MyItems from "./Pages/MyItems/MyItems";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/manageitem" element={<ManageItem></ManageItem>}></Route>
         <Route path="/additem" element={<AddItem></AddItem>}></Route>
         <Route path="/myitems" element={<MyItems></MyItems>}></Route>
+        <Route path="/inventory" element={<Inventory></Inventory>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
       </Routes>
