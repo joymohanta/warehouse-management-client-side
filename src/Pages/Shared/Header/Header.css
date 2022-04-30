@@ -1,0 +1,19 @@
+.nav-container{
+    text-align: center;
+}
+.nav-bar{
+    background-color: grey;
+    padding: 16px 0;
+}
+.nav-bar a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+.nav-bar a:hover{
+    color: blue;
+}
+.nav-bar a.active{
+    color: blue;
+}
