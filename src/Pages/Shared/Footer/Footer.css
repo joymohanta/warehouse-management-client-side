@@ -1,0 +1,8 @@
+.footer-container{
+    background-color: gray;
+    padding: 50px 0;
+    display: flex;
+}
+.per-section{
+    margin-left: 80px;
+}
