@@ -9,6 +9,16 @@
 }
 .item-row{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-left: 80px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 45px;
+}
+.hero_icon{
+    width: 100px;
+
+}
+.short-detail{
+    display: flex;
+}
+.each-detail{
+    text-align: center;
 }
