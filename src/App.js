@@ -7,6 +7,7 @@ import Inventory from "./Pages/Inventory/Inventory";
 import Login from "./Pages/Login/Login";
 import ManageItem from "./Pages/ManageItem/ManageItem";
 import MyItems from "./Pages/MyItems/MyItems";
+import NotFound from "./Pages/NotFound/NotFound";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import SignUp from "./Pages/SignUp/SignUp";
@@ -24,6 +25,7 @@ function App() {
         <Route path="/inventory" element={<Inventory></Inventory>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

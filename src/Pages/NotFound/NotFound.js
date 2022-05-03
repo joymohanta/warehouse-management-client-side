@@ -3,7 +3,10 @@ import React from "react";
 const NotFound = () => {
   return (
     <div>
-      <h2>This is Not found page</h2>
+      <img
+        src="https://www.iowafieldreport.com/wp-content/uploads/2021/11/6M513.png"
+        alt=""
+      />
     </div>
   );
 };

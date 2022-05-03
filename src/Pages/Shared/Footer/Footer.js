@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="per-section">
-        <h4>NEWS LETTERS</h4>
+        <h4 className="title">NEWS LETTERS</h4>
         <p>
           <small>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />{" "}
@@ -17,7 +17,7 @@ const Footer = () => {
         </p>
       </div>
       <div className="per-section">
-        <h4>LETEST TWEETS</h4>
+        <h4 className="title">LETEST TWEETS</h4>
         <p>
           <small>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />{" "}
@@ -28,7 +28,7 @@ const Footer = () => {
         </p>
       </div>
       <div className="per-section">
-        <h4>CONTACTS</h4>
+        <h4 className="title">CONTACTS</h4>
         <p>Mobile: 0144444444</p>
         <p>Email: joyroy1062@gmail.com</p>
         <p>Address: Dhaka, azimpur</p>
