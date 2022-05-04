@@ -18,3 +18,13 @@
 .nav-bar a.active{
     color: rgb(50, 254, 94);
 }
+.signout_btn{
+    border: none;
+    color: white;
+    background-color: grey;
+    font-weight: 500;
+
+}
+.signout_btn:hover{
+    color: rgb(50, 254, 94);
+}

@@ -5,6 +5,7 @@ import Blogs from "./Pages/Blogs/Blogs";
 import Home from "./Pages/Home/Home";
 import Inventory from "./Pages/Inventory/Inventory";
 import Login from "./Pages/Login/Login";
+import RequireAuth from "./Pages/Login/RequireAuth/RequireAuth";
 import ManageItem from "./Pages/ManageItem/ManageItem";
 import MyItems from "./Pages/MyItems/MyItems";
 import NotFound from "./Pages/NotFound/NotFound";
@@ -23,7 +24,14 @@ function App() {
         <Route path="/manageitem" element={<ManageItem></ManageItem>}></Route>
         <Route path="/additem" element={<AddItem></AddItem>}></Route>
         <Route path="/myitems" element={<MyItems></MyItems>}></Route>
-        <Route path="/inventory/:id" element={<Inventory></Inventory>}></Route>
+        <Route
+          path="/inventory/:id"
+          element={
+            <RequireAuth>
+              <Inventory></Inventory>
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
