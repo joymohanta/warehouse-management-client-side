@@ -3,6 +3,7 @@ import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import "./Login.css";
+import SignInWithSocial from "./SignInWithSocial/SignInWithSocial";
 
 const Login = () => {
   const userNameRef = useRef("");
@@ -55,19 +56,10 @@ const Login = () => {
           Didn't join yet? <Link to="/signup">SignUp</Link>
         </p>
         <input className="login-btn" type="submit" value="Login" />
-        <div className="dash-bar">
-          <div className="first-dash"></div>
-          <p>or</p>
-          <div className="second-dash"></div>
-        </div>
-        <button className="social-btn">
-          <img
-            src="https://i.ibb.co/yQtcZyY/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
-            alt=""
-          />
-          <span>Google SignIn</span>
-        </button>
       </form>
+      <div className="social_login">
+        <SignInWithSocial></SignInWithSocial>
+      </div>
     </div>
   );
 };

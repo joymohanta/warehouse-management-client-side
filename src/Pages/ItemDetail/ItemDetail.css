@@ -14,9 +14,10 @@
     text-decoration: none;
     background-color: rgb(62, 164, 96);
     color: white;
-    padding: 10px 10px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    margin-right: 8px;
 }
 .inventory-btn:hover{
     background-color: rgb(45, 139, 76);

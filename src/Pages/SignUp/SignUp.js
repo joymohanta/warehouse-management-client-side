@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import "./SignUp.css";
 import auth from "../../firebase.init";
+import SignInWithSocial from "../Login/SignInWithSocial/SignInWithSocial";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -62,19 +63,10 @@ const SignUp = () => {
           Have an account? <Link to="/login">LogIn</Link>
         </p>
         <input className="login-btn" type="submit" value="SignUp" />
-        <div className="dash-bar">
-          <div className="first-dash"></div>
-          <p>or</p>
-          <div className="second-dash"></div>
-        </div>
-        <button className="social-btn">
-          <img
-            src="https://i.ibb.co/yQtcZyY/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
-            alt=""
-          />
-          <span>Google SignIn</span>
-        </button>
       </form>
+      <div className="social_signup">
+        <SignInWithSocial></SignInWithSocial>
+      </div>
     </div>
   );
 };

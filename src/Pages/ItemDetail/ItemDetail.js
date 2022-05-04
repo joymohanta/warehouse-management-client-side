@@ -15,8 +15,8 @@ const ItemDetail = (props) => {
         {name} - {supplier}
       </h5>
       <p className="text-align-justify"> {description} </p>
-      <div className="d-flex justify-content-around align-items-center">
-        <div>
+      <div className="d-flex justify-content-between align-items-center">
+        <div className="ml-2">
           <h6 id="id-price">Price: {price} </h6>
           <h6>Quantity: {quantity} </h6>
         </div>

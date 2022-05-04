@@ -78,7 +78,9 @@
 .social-btn img{
     width: 45px;
 }
-
+.social_signup{
+    margin-top: 370px;
+}
 @media screen and (max-width: 576px) {
     .signup-form{
         width: 100%;
