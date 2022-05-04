@@ -3,7 +3,7 @@
 .login-form{
     border: 1px solid gray;
     width: 45%;
-    height: 500px;
+    height: 523px;
     margin: 10px auto;
     font-family: 'Poppins', sans-serif;
 }
@@ -43,7 +43,7 @@
     cursor: pointer;
 }
 .social_login{
-    margin-top: 280px;
+    margin-top: 300px;
 }
 @media screen and (max-width: 576px) {
     .login-form{

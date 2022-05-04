@@ -4,15 +4,20 @@ import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import "./SignUp.css";
 import auth from "../../firebase.init";
 import SignInWithSocial from "../Login/SignInWithSocial/SignInWithSocial";
+import Loading from "../Shared/Loading/Loading";
 
 const SignUp = () => {
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [createUserWithEmailAndPassword, user, loading, signupError] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
   if (user) {
     navigate("/home");
+  }
+
+  if (loading) {
+    return <Loading></Loading>;
   }
 
   const handleSignUp = (event) => {

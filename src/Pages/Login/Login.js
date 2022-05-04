@@ -1,9 +1,16 @@
+import { async } from "@firebase/util";
 import React, { useRef } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import Loading from "../Shared/Loading/Loading";
 import "./Login.css";
 import SignInWithSocial from "./SignInWithSocial/SignInWithSocial";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const userNameRef = useRef("");
@@ -15,8 +22,33 @@ const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
   if (user) {
     navigate(from, { replace: true });
+  }
+
+  const passwordReset = async () => {
+    const userName = userNameRef.current.value;
+    if (userName) {
+      await sendPasswordResetEmail(userName);
+      toast("Ok, go to your email");
+    } else {
+      toast("Please set your email");
+    }
+  };
+
+  if (loading || sending) {
+    return <Loading></Loading>;
+  }
+
+  let errorNotification;
+  if (error) {
+    errorNotification = (
+      <div>
+        <p className="text-danger">Error: {error.message}</p>
+      </div>
+    );
   }
 
   const handleLogin = (event) => {
@@ -49,9 +81,10 @@ const Login = () => {
           required
         />
         <br />
-        <a className="reset" href="#">
+        <button onClick={passwordReset} className="reset btn btn-link">
           Reset Password
-        </a>
+        </button>
+        {errorNotification}
         <p className="signup-link">
           Didn't join yet? <Link to="/signup">SignUp</Link>
         </p>
@@ -60,6 +93,7 @@ const Login = () => {
       <div className="social_login">
         <SignInWithSocial></SignInWithSocial>
       </div>
+      <ToastContainer />
     </div>
   );
 };

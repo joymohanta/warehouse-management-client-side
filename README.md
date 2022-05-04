@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# LAPTOP-DEALER | STOCK
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+LIVE LINK: (https://github.com/facebook/create-react-app)
 
-## Available Scripts
+## USED FEATURES
 
-In the project directory, you can run:
+- React Router
+- React Bootstrap
+- React Firebase Hooks
+- React Toastify
+- Firebase Authentication
 
 ### `npm start`
 
