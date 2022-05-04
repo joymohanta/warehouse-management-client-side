@@ -1,12 +1,41 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import "./SignUp.css";
+import auth from "../../firebase.init";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+  const [error, setError] = useState("");
+  const [createUserWithEmailAndPassword, user, loading, signupError] =
+    useCreateUserWithEmailAndPassword(auth);
+
+  if (user) {
+    navigate("/home");
+  }
+
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    const userName = event.target.email.value;
+    const userPassword = event.target.password.value;
+    const confirmPassword = event.target.confirmPassword.value;
+
+    if (userPassword !== confirmPassword) {
+      setError("Password did not match");
+      return;
+    }
+    if (userPassword.length < 8) {
+      setError("Password too short");
+      return;
+    }
+
+    createUserWithEmailAndPassword(userName, userPassword);
+  };
+
   return (
     <div className="signup-form">
       <h2>Sign Up</h2>
-      <form className="form-control">
+      <form onSubmit={handleSignUp} className="form-control">
         <label>Username</label>
         <br />
         <input className="input-field" type="email" name="email" required />
@@ -24,10 +53,11 @@ const SignUp = () => {
         <input
           className="input-field"
           type="password"
-          name="password"
+          name="confirmPassword"
           required
         />
         <br />
+        <p className="text-danger">{error}</p>
         <p className="login-link">
           Have an account? <Link to="/login">LogIn</Link>
         </p>

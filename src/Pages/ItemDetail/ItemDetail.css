@@ -15,6 +15,7 @@
     background-color: rgb(62, 164, 96);
     color: white;
     padding: 10px 10px;
+    border: none;
     border-radius: 5px;
 }
 .inventory-btn:hover{

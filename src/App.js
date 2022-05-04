@@ -18,11 +18,12 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/manageitem" element={<ManageItem></ManageItem>}></Route>
         <Route path="/additem" element={<AddItem></AddItem>}></Route>
         <Route path="/myitems" element={<MyItems></MyItems>}></Route>
-        <Route path="/inventory" element={<Inventory></Inventory>}></Route>
+        <Route path="/inventory/:id" element={<Inventory></Inventory>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
