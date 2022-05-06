@@ -16,9 +16,15 @@ const Header = () => {
       <nav className="nav-bar">
         <NavLink to="/">HOME</NavLink>
         <NavLink to="/blogs">BLOGS</NavLink>
-        <NavLink to="/manageitem">MANAGE ITEM</NavLink>
-        <NavLink to="/additem">ADD ITEM</NavLink>
-        <NavLink to="/myitems">MY ITEMS</NavLink>
+
+        {user && (
+          <>
+            <NavLink to="/manageitem">MANAGE ITEM</NavLink>
+            <NavLink to="/additem">ADD ITEM</NavLink>
+            <NavLink to="/myitems">MY ITEMS</NavLink>
+          </>
+        )}
+
         {user ? (
           <button onClick={handleSignoutBtn} className="signout_btn">
             LOGOUT

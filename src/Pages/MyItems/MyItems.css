@@ -1,0 +1,8 @@
+.myItem_style{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.myItem_style img{
+    width: 350px;
+}

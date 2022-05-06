@@ -32,7 +32,7 @@ const AddItem = () => {
         <input
           className="input-field"
           {...register("supplier")}
-          placeholder="Supplier Name"
+          placeholder="Supplier Email"
         />
         <br />
         <textarea

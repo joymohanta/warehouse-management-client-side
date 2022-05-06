@@ -4,5 +4,9 @@
     display: flex;
 }
 .per-section{
-    margin-left: 80px;
+    border: 1px solid gray;
+    width: 400px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px
 }

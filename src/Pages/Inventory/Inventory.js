@@ -54,7 +54,7 @@ const Inventory = () => {
       </h4>
       <p> {item.description} </p>
       <button onClick={handleDeliver} className="btn btn-primary mb-3">
-        Deliver One Item
+        Delivered
       </button>
       <section>
         <h5>Enter your new quantity item here</h5>
