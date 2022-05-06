@@ -6,3 +6,17 @@
 .selected_item_detail img{
     width: 400px;
 }
+.manage_button{
+    margin-top: 80px;
+}
+.manage_button .navigate_button{
+    background-color: yellowgreen;
+    padding: 10px 120px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 500;
+}
+.manage_button .navigate_button:hover{
+    text-decoration: none;
+    background-color: rgb(93, 137, 5);
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./Inventory.css";
 
 const Inventory = () => {
@@ -53,14 +53,10 @@ const Inventory = () => {
         Total quantity : <span id="total-quantity"> {item.quantity} </span>
       </h4>
       <p> {item.description} </p>
-      <button
-        id="deliver-button"
-        onClick={handleDeliver}
-        className="btn btn-primary mb-3"
-      >
+      <button onClick={handleDeliver} className="btn btn-primary mb-3">
         Deliver One Item
       </button>
-      <div>
+      <section>
         <h5>Enter your new quantity item here</h5>
         <input
           id="quantity-input"
@@ -70,13 +66,14 @@ const Inventory = () => {
         />
         <br />
         <br />
-        <button
-          id="quantity-button"
-          onClick={handleQuantity}
-          className="btn btn-success"
-        >
+        <button onClick={handleQuantity} className="btn btn-success">
           Add Quantity
         </button>
+      </section>
+      <div className="manage_button">
+        <Link className="navigate_button" to="/manageitem">
+          Manage All Items
+        </Link>
       </div>
     </div>
   );
