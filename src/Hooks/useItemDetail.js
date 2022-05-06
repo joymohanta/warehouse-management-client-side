@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useItemDetail = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch("service.json")
+    fetch("http://localhost:5000/item")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);

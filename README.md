@@ -1,6 +1,6 @@
 # LAPTOP-DEALER | STOCK
 
-LIVE LINK: (https://github.com/facebook/create-react-app)
+LIVE LINK: https://laptop-dealer-stock.web.app/
 
 ## USED FEATURES
 
