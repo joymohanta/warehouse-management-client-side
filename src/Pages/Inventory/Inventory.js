@@ -54,6 +54,21 @@ const Inventory = () => {
     const quantity = document.getElementById("total-quantity");
     const beforeQuantity = quantity.innerText;
     quantity.innerText = parseInt(beforeQuantity) - 1;
+    const number = quantity.innerText;
+    const quantityNumber = { number };
+    const url = `http://localhost:5000/item/${id}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(quantityNumber),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        alert("Quantity added successfully!!");
+      });
   };
 
   return (

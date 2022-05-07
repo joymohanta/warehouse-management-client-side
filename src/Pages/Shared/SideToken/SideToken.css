@@ -1,0 +1,28 @@
+.token{
+    display: flex;
+    justify-content: end;
+    position: relative;
+
+}
+#part2 a{
+bottom: 196px;
+}
+#part3 a{
+    bottom: 253px;
+}
+.part a{
+    color: white;
+    border: 1px solid #7DB58A;
+    margin-bottom: 1px;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    background-color: #7DB58A;
+    position: fixed;
+    bottom: 310px;
+    right: 0;
+}
+.icon{
+    width: 20px;
+    margin-top: 15px;
+}

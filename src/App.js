@@ -11,6 +11,7 @@ import MyItems from "./Pages/MyItems/MyItems";
 import NotFound from "./Pages/NotFound/NotFound";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
+import SideToken from "./Pages/Shared/SideToken/SideToken";
 import SignUp from "./Pages/SignUp/SignUp";
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <SideToken></SideToken>
       <Footer></Footer>
     </div>
   );

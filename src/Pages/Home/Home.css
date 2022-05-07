@@ -5,6 +5,11 @@
     height: 700px;
     display: block;
 }
+.animation-title{
+    margin-bottom: 350px;
+    color: aqua;
+
+}
 .analitics-part{
     padding: 50px 0;
     background-color: beige;
@@ -61,4 +66,30 @@
     border: 1px dashed gray;
     width: 200px;
     box-sizing: border-box;
+}
+@media screen and (max-width: 576px) {
+    .size-image{
+        height: 500px;
+    }
+    .animation-title{
+        margin-bottom: 250px;
+    }
+    .style-bar{
+        width: 25%;
+        margin: 10px auto;
+    }
+    .item-row{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .short-detail{
+        display: flex;
+        flex-direction: column;
+    }
+    .counter_num{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+    }
 }

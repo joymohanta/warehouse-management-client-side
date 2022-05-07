@@ -26,26 +26,39 @@ const Home = () => {
         <Carousel.Item>
           <img className="size-image" src={pic01} alt="First slide" />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <div className="animation-title">
+              <h2>WELCOME TO LAPTOP HOUSE</h2>
+              <h5>
+                What's up guys! welcome to my new laptop store house with some
+                new experience device
+              </h5>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="size-image" src={pic02} alt="Second slide" />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div className="animation-title">
+              <h2>WELCOME TO LAPTOP HOUSE</h2>
+              <h5>
+                This world will get you to the real feelings of expert user of
+                laptop checkout
+              </h5>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="size-image" src={pic03} alt="Third slide" />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <div className="animation-title">
+              <h2>WELCOME TO LAPTOP HOUSE</h2>
+              <h5>
+                Let's get some new experience in the laptop world with some new
+                unbeatable device
+              </h5>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

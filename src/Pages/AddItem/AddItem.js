@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from "react-toastify";
 
 const AddItem = () => {
   const { register, handleSubmit } = useForm();
@@ -16,54 +17,56 @@ const AddItem = () => {
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
+        toast("Congrates!! New item added");
       });
   };
   return (
     <div className="text-center my-4">
-      <h2>This is Add item page</h2>
+      <h2 className="title">ADD YOUR NEW ITEM HERE</h2>
       <br />
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
-          className="input-field"
+          className="input-field w-50"
           {...register("name", { required: true, maxLength: 20 })}
           placeholder="Item Name"
         />
         <br />
         <input
-          className="input-field"
+          className="input-field w-50"
           {...register("supplier")}
           placeholder="Supplier Email"
         />
         <br />
         <textarea
-          className="input-field"
+          className="input-field w-50"
           {...register("description")}
           placeholder="Description"
         />
         <br />
         <input
-          className="input-field"
+          className="input-field w-50"
           type="number"
           {...register("price")}
           placeholder="Price"
         />
         <br />
         <input
-          className="input-field"
+          className="input-field w-50"
           type="number"
           {...register("quantity")}
           placeholder="Quantity Number"
         />
         <br />
         <input
-          className="input-field"
+          className="input-field w-50"
           type="text"
           {...register("img")}
           placeholder="Photo URL"
         />
         <br />
-        <input type="submit" />
+        <input className="mt-4 btn-lg btn-success" type="submit" />
       </form>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

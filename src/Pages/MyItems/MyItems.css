@@ -6,3 +6,9 @@
 .myItem_style img{
     width: 350px;
 }
+@media screen and (max-width: 576px) {
+    .myItem_style{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
