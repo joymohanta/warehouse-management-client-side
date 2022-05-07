@@ -23,17 +23,31 @@ const Inventory = () => {
     const beforeQuantity = getCurrentQuantity();
     if (isAdd === true) {
       quantity.innerText = beforeQuantity + amount;
-    } else {
-      quantity.innerText = beforeQuantity - amount;
     }
   }
-  const handleQuantity = () => {
+  const handleQuantity = (event) => {
     const amountField = document.getElementById("quantity-input");
     const amount = parseInt(amountField.value);
-    amountField.value = "";
     if (amount > 0) {
       totalQuantity(amount, true);
     }
+    const total = amountField.value;
+    const number = total;
+    amountField.value = "";
+    const quantityNumber = { number };
+    const url = `http://localhost:5000/item/${id}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(quantityNumber),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        alert("Quantity added successfully!!");
+      });
   };
 
   const handleDeliver = () => {
@@ -60,7 +74,8 @@ const Inventory = () => {
         <h5>Enter your new quantity item here</h5>
         <input
           id="quantity-input"
-          type="text"
+          type="number"
+          name="number"
           placeholder="Quantity number"
           required
         />
