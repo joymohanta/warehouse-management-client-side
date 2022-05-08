@@ -85,9 +85,9 @@ const Home = () => {
             <h4 className="title">TEST RESULT</h4>
             <p className="text">
               <small>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusamus placeat enim consequuntur sequi, beatae unde culpa
-                illum inventore iusto itaque.
+                The real test result of these laptops are very strong. Our many
+                client make this to happen to this test. But still anyone can
+                take a look of it.
               </small>
             </p>
           </div>
@@ -96,9 +96,9 @@ const Home = () => {
             <h4 className="title">CHIP SET</h4>
             <p className="text">
               <small>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusamus placeat enim consequuntur sequi, beatae unde culpa
-                illum inventore iusto itaque.
+                These laptops chip sets are unique. If any problem face user can
+                take here in our support system. And also can take a repeat of
+                chip set as needed.
               </small>
             </p>
           </div>
@@ -107,9 +107,9 @@ const Home = () => {
             <h4 className="title">TECHNOLOGY</h4>
             <p className="text">
               <small>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusamus placeat enim consequuntur sequi, beatae unde culpa
-                illum inventore iusto itaque.
+                Intel, MSI and ASUS technology bring here a revolution on these
+                devices. But this is not for this year rather every year we
+                change our genaration.
               </small>
             </p>
           </div>
@@ -118,9 +118,9 @@ const Home = () => {
             <h4 className="title">PERFORMANCE</h4>
             <p className="text">
               <small>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusamus placeat enim consequuntur sequi, beatae unde culpa
-                illum inventore iusto itaque.
+                According to our client feedback, the performance is awesome. It
+                any problem occur user can take it to our engineer and check it
+                out for free.
               </small>
             </p>
           </div>

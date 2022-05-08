@@ -35,6 +35,7 @@ const AddItem = () => {
           className="input-field w-50"
           {...register("supplier")}
           placeholder="Supplier Email"
+          required
         />
         <br />
         <textarea
@@ -55,6 +56,7 @@ const AddItem = () => {
           type="number"
           {...register("quantity")}
           placeholder="Quantity Number"
+          required
         />
         <br />
         <input

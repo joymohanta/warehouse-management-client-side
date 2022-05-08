@@ -25,7 +25,7 @@ const Login = () => {
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
   if (user) {
-    navigate(from, { replace: true });
+    // navigate(from, { replace: true });
   }
 
   const passwordReset = async () => {
@@ -51,11 +51,24 @@ const Login = () => {
     );
   }
 
-  const handleLogin = (event) => {
+  const handleLogin = async (event) => {
     event.preventDefault();
     const userName = userNameRef.current.value;
     const userPassword = userPasswordRef.current.value;
-    signInWithEmailAndPassword(userName, userPassword);
+    await signInWithEmailAndPassword(userName, userPassword);
+    const url = "http://localhost:5000/login";
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ userName }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        localStorage.setItem("jwt_Token", data.getToken);
+        navigate("/myitems");
+      });
   };
   return (
     <div className="login-form">
