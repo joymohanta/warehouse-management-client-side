@@ -7,7 +7,7 @@ const Inventory = () => {
   const [item, setItem] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/item/${id}`;
+    const url = `https://secure-beyond-10802.herokuapp.com/item/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItem(data));
@@ -35,7 +35,7 @@ const Inventory = () => {
     const number = total;
     amountField.value = "";
     const quantityNumber = { number };
-    const url = `http://localhost:5000/item/${id}`;
+    const url = `https://secure-beyond-10802.herokuapp.com/item/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -56,7 +56,7 @@ const Inventory = () => {
     quantity.innerText = parseInt(beforeQuantity) - 1;
     const number = quantity.innerText;
     const quantityNumber = { number };
-    const url = `http://localhost:5000/item/${id}`;
+    const url = `https://secure-beyond-10802.herokuapp.com/item/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

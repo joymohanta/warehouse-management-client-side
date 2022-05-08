@@ -56,7 +56,7 @@ const Login = () => {
     const userName = userNameRef.current.value;
     const userPassword = userPasswordRef.current.value;
     await signInWithEmailAndPassword(userName, userPassword);
-    const url = "http://localhost:5000/login";
+    const url = "https://secure-beyond-10802.herokuapp.com/login";
     fetch(url, {
       method: "POST",
       headers: {
